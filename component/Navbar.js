@@ -1,8 +1,11 @@
+import React from "react";
+
 const Nabar = () => {
 
 
     return(
-        <div>
+    <nav>   
+        
              <div className="flex items-center">
    <h1 className="flex items-center justify-center w-full px-4 py-2 bg-blue-500 text-white text-4xl font-bold rounded-lg shadow-lg">
   Changing
@@ -29,7 +32,8 @@ const Nabar = () => {
 
          
     </div>
-        </div>
+        
+        </nav> 
     )
 
 

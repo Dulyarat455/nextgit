@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+
+import React from "react";
 
 import DropdownSelect from '../../component/Dropdown'
 import Nabar from '../../component/Navbar';
@@ -24,9 +24,9 @@ export default function Home() {
   let x
   return (
     <div>
-   
+   <Nabar/>
 
-   <div className="flex items-center">
+   {/* <div className="flex items-center">
    <h1 className="flex items-center justify-center w-full px-4 py-2 bg-blue-500 text-white text-4xl font-bold rounded-lg shadow-lg">
   Changing
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-8 h-6">
@@ -51,7 +51,7 @@ export default function Home() {
           </div>
 
          
-    </div>
+    </div> */}
     {/* <DropdownSelect options={options} onChange={handleSelectChange} /> */}
     {/* <TrashIcon className="w-6 h-6 text-gray-800 dark:text-white" /> */}
     
