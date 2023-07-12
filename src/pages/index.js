@@ -24,8 +24,13 @@ export default function Home() {
   let x
   return (
     <div>
+      
+
    <Nabar/>
-   <p>55555</p>
+   <br/>
+   <div> <p>55555</p></div>
+
+ 
 
    {/* <div className="flex items-center">
    <h1 className="flex items-center justify-center w-full px-4 py-2 bg-blue-500 text-white text-4xl font-bold rounded-lg shadow-lg">
@@ -53,7 +58,7 @@ export default function Home() {
 
          
     </div> */}
-    {/* <DropdownSelect options={options} onChange={handleSelectChange} /> */}
+    <DropdownSelect options={options} onChange={handleSelectChange} />
     {/* <TrashIcon className="w-6 h-6 text-gray-800 dark:text-white" /> */}
     
 
