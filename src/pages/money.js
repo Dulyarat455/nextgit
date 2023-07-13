@@ -7,6 +7,9 @@ import DropdownSelect from "../../component/Dropdown";
 export default function Money() {
   const [selectedIn, setSelectedIn] = useState(0);
   const [selectedOut, setSelectedOut] = useState(0);
+  const [resultMoney, setResultMoney] = useState(0);
+  const [inputMoney,setInputMoney] = useState(0);
+
 
   const options = [
     { value: 34.64 , label: 'USD-ดอลลาร์สหรัฐ-สหรัฐอเมริกา' },
@@ -14,14 +17,24 @@ export default function Money() {
     { value: 1, label: 'THB-บาท-ไทย' },
   ];
   
-    const handleSelectChangeIn =async (event) => {
+    const handleSelectChangeIn = (event) => {
       console.log('Selected value:', event.target.value);
-      setSelectedIn(event.target.value)
+      setSelectedIn(parseFloat(event.target.value))
       
     };
-    const handleSelectChangeOut =async (event) => {
+    const handleSelectChangeOut = (event) => {
       console.log('Selected value:', event.target.value);
-      setSelectedOut(event.target.value)
+      setSelectedOut(parseFloat(event.target.value))
+      
+    };
+    const Calculate  = () => {
+      console.log("selectedIn = ",selectedIn)
+      console.log("selectedOut = ",selectedOut)
+      if(selectedIn !== 0 && selectedOut !== 0){
+
+        setResultMoney(selectedIn/selectedOut)
+      }
+      console.log("resultMoney = ",resultMoney)
       
     };
 
@@ -60,13 +73,14 @@ return(
       <br/>
       <div class="flex justify-center">
         
-      <button  type='button' className='bg-blue-500 text-white  border-2 m-2 p-2 border-black-500 rounded-lg' >Change</button>
+      <button  type='button' className='bg-blue-500 text-white  border-2 m-2 p-2 border-black-500 rounded-lg'onClick={()=>Calculate()} >Change</button>
       </div>
       <br/>
 
       <div class="flex justify-center">
         
-        <h1 className="text-blue-400">result :</h1>
+        {resultMoney !== 0 && (<h1 className="text-blue-400">result : {resultMoney}</h1>)
+}      
       </div>
 </div>
 
