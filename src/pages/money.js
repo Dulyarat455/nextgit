@@ -9,6 +9,7 @@ export default function Money() {
   const [selectedOut, setSelectedOut] = useState(0);
   const [resultMoney, setResultMoney] = useState(0);
   const [inputMoney,setInputMoney] = useState(0);
+  const[wran,setWarn] = useState(false)
 
 
   const options = [
@@ -65,13 +66,21 @@ export default function Money() {
       console.log("selectedIn = ",selectedIn)
       console.log("selectedOut = ",selectedOut)
       if((selectedIn !== 0 && selectedOut !== 0) && inputMoney){
-
+       setWarn(true)
         setResultMoney((inputMoney)*selectedIn/selectedOut)
       }
       else if(selectedIn !== 0 && selectedOut !== 0){
+        setWarn(true)
         setResultMoney(selectedIn/selectedOut)
       }
+      else{
+        setWarn(false)
+        setResultMoney(0)
+      }
       console.log("resultMoney = ",resultMoney)
+     
+      
+      
       
     };
     console.log(inputMoney)
@@ -97,6 +106,7 @@ return(
       <input type="number" className="border-2 border-black-500 rounded" onChange={(e)=>(setInputMoney(parseFloat(e.target.value)))}/>
 
       </div>
+      
       <br/>
 
       <div class="flex justify-center">
@@ -111,15 +121,20 @@ return(
       <div class="flex justify-center">
         
       <button  type='button' className='bg-blue-500 text-white  border-2 m-2 p-2 border-black-500 rounded-lg'onClick={()=>Calculate()} >Change</button>
-      {resultMoney !== 0 && (<h1 className="text-blue-400 py-4">result : {resultMoney}</h1>)
-}      
+      {resultMoney !== 0 && (<h1 className="text-blue-400 py-4">result : {resultMoney}</h1>)}
+      {wran === false && (<h1 className="text-red-400 py-4">Please select all options.</h1>)}
+      
+     
+    
       </div>
       <br/>
+      
 
       {/* <div class="flex justify-center">
-        
+      {resultMoney !== 0 && (<h1 className="text-blue-400 py-4">result : {resultMoney}</h1>)}
        
       </div> */}
+      
 </div>
 
 
