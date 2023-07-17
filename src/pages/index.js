@@ -28,6 +28,18 @@ export default function Home() {
 
    <Nabar/>
    <br/>
+   <div className="flex justify-center container mx-auto py-8">
+        <h1 className="text-3xl font-semibold mb-4">Welcome to the Changing</h1>
+       
+        
+      </div>
+
+      <div className="flex justify-center container mx-auto py-8">
+      <p className="text-lg">This is the content of the home page.</p>
+       
+        
+      </div>
+      
    {/* <div> <p>55555</p></div> */}
 
  
@@ -58,7 +70,7 @@ export default function Home() {
 
          
     </div> */}
-    <DropdownSelect options={options} onChange={handleSelectChange} />
+    {/* <DropdownSelect options={options} onChange={handleSelectChange} /> */}
     {/* <TrashIcon className="w-6 h-6 text-gray-800 dark:text-white" /> */}
     
 

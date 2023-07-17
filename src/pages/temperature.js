@@ -131,8 +131,8 @@ return(
 <div class="flex justify-center">
   <div class="bg-blue-500 w-21 px-1 py-1 border-2 border-black-500 rounded flex items-center">
     <h1 class="text-white ml-1">Temperature</h1>
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 35 20" stroke-width="2.0" stroke="currentColor" class="w-8 h-8 ml-1">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M1 7h5m4 0h5m4 0h5M3 12h6m4 0h6m-16 4h5m4 0h5m4 0h5" />
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 35 20" strokeWidth="2.0" stroke="currentColor" class="w-8 h-8 ml-1">
+      <path stroke-linecap="round" strokeLinejoin="round" d="M1 7h5m4 0h5m4 0h5M3 12h6m4 0h6m-16 4h5m4 0h5m4 0h5" />
     </svg>
   </div>
 
@@ -150,8 +150,8 @@ return(
 
       <div class="flex justify-center">
       <DropdownSelect options={options} onChange={handleSelectChangeIn} />
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2 mr-2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6 ml-2 mr-2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
       </svg>
       <DropdownSelect options={options} onChange={handleSelectChangeOut} />
 

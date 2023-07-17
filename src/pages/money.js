@@ -90,18 +90,18 @@ return(
 <div>
           <Nabar/>
           <br/>
-          <div class="flex justify-center">
-        <div class="bg-blue-500 w-21 px-1 py-1 border-2 border-black-500 rounded flex items-center">
-          <h1 class="text-white ml-1">Money</h1>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 35 20" stroke-width="2.0" stroke="currentColor" class="w-8 h-8 ml-1">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <div className="flex justify-center">
+        <div className="bg-blue-500 w-21 px-1 py-1 border-2 border-black-500 rounded flex items-center">
+          <h1 className="text-white ml-1">Money</h1>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 35 20" strokeWidth="2.0" stroke="currentColor" className="w-8 h-8 ml-1">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </div>
         
 
       </div>
       <br/>
-      <div class="flex justify-center">
+      <div className="flex justify-center">
         <h1 className="text-blue-400 mr-1">Input : </h1>
       <input type="number" className="border-2 border-black-500 rounded" onChange={(e)=>(setInputMoney(parseFloat(e.target.value)))}/>
 
@@ -109,16 +109,16 @@ return(
       
       <br/>
 
-      <div class="flex justify-center">
+      <div className="flex justify-center">
       <DropdownSelect options={options} onChange={handleSelectChangeIn} />
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2 mr-2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 ml-2 mr-2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
       </svg>
       <DropdownSelect options={options} onChange={handleSelectChangeOut} />
 
       </div>
       <br/>
-      <div class="flex justify-center">
+      <div className="flex justify-center">
         
       <button  type='button' className='bg-blue-500 text-white  border-2 m-2 p-2 border-black-500 rounded-lg'onClick={()=>Calculate()} >Change</button>
       {resultMoney !== 0 && (<h1 className="text-blue-400 py-4">result : {resultMoney}</h1>)}
