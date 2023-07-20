@@ -15,11 +15,21 @@ export default function Physics() {
 
 
   const options = [
-    { value: 0 , label:  ' °?' },
-    { value: 1 , label:  ' °C' },
-    { value: 2 , label: '°F' },
-    { value: 3 , label: '°R' },
-    { value: 4 , label: '°k' },
+    { value: 0 , label: 'choose unit' },
+    { value: 1 , label: 'normal(SI)' },
+    { value: 1000000000000, label: 'tera' },
+    { value: 1000000000, label: 'giga' },
+    { value: 1000000 , label: 'mega' },
+    { value: 1000 , label: 'kilo' },
+    { value: 100 , label: 'hecto' },
+    { value: 10 , label: 'deca' },
+    { value: 0.1 , label: 'deci' },
+    { value: 0.01 , label: 'centi' },
+    { value: 0.001 , label: 'milli' },
+    { value: 0.000001, label: 'micro' },
+    { value: 0.000000001 , label: 'nano' },
+    { value: 0.000000000001 , label: 'pico' },
+    
     
     
 
@@ -38,8 +48,44 @@ export default function Physics() {
     
   };
   const Calculate  = () => {
+    console.log("selectedIn = ",selectedIn)
+      console.log("selectedOut = ",selectedOut)
+      if((selectedIn !== 0 && selectedOut !== 0) && inputTemp){
+        setWarn(true)
+        setWarnOp(true)
+         setWarnInput(true)
+        if(selectedIn === selectedOut){
+         setResultTemp(inputTemp)
+   
+        }
+        else{
+          setResultTemp(inputTemp*parseFloat(selectedIn)/parseFloat(selectedOut))
 
-
+        }
+     }
+     else if((selectedIn === 0 && selectedOut === 0) && (!inputTemp)){
+      console.log("case 1")
+      setWarn(false)
+      setWarnInput(true)
+      setWarnOp(true)
+      setResultTemp(0)
+    }
+    else if((selectedIn === 0 && selectedOut === 0)||(selectedIn  && selectedOut === 0)||(selectedIn === 0 && selectedOut) ){
+      console.log("case 2")
+      setWarnOp(false)
+      setWarn(true)
+      setWarnInput(true)
+      setResultTemp(0)
+    }
+    
+    else {
+      console.log("case 3")
+      setWarnOp(true)
+      setWarn(true)
+      setWarnInput(false)
+      setResultTemp(0)
+    }
+     
   }
 
 
@@ -60,7 +106,7 @@ return(
 <br/>
 <div class="flex justify-center">
         <h1 className="text-blue-400 mr-1">Input : </h1>
-      <input type="number" className="border-2 border-black-500 rounded" onChange={(e)=>(setInputTemp(parseFloat(e.target.value)))}/>
+      <input  type="number" className="border-2 border-black-500 rounded" onChange={(e)=>(setInputTemp(parseFloat(e.target.value)))}/>
  </div>
       <br/>
 

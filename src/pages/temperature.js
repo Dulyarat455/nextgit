@@ -97,7 +97,7 @@ export default function Temperature() {
       setWarnOp(true)
       setResultTemp(0)
     }
-    else if((selectedIn === 0 && selectedOut === 0)){
+    else if((selectedIn === 0 && selectedOut === 0)||(selectedIn  && selectedOut === 0)||(selectedIn === 0 && selectedOut)){
       console.log("case 2")
       setWarnOp(false)
       setWarn(true)
