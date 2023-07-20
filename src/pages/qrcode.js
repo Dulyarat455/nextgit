@@ -23,7 +23,7 @@ return(
         <Nabar/>
         <br/>
         <div class="flex justify-center">
-        <h1>QR Code Generator</h1>
+        <h1 className="text-sm font-medium">QR Code Generator</h1>
       <input  className="border-2 border-black-500 rounded ml-2" type="text" value={inputData} onChange={handleInputChange} />
     
       
